@@ -1,0 +1,133 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="24dp">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_regular"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGender"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+      <RadioButton android:id="@+id/rbPria" android:text="Pria" android:buttonTint="@color/black" android:layout_width="wrap_content" android:textColor="@color/black"  android:layout_height="wrap_content" android:fontFamily="@font/poppins_regular"/>
+      <RadioButton android:id="@+id/rbWanita" android:text="Wanita" android:buttonTint="@color/black" android:layout_width="wrap_content" android:textColor="@color/black" android:layout_height="wrap_content" android:fontFamily="@font/poppins_regular"/>
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Usia (tahun)"
+        android:textColorHint="@color/black"
+        android:fontFamily="@font/poppins_regular">
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/etUsia"
+          android:inputType="number"
+          android:textColor="@color/black"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tinggi Badan (cm)"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_regular">
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/etTinggi"
+          android:inputType="numberDecimal"
+          android:layout_width="match_parent"
+          android:textColor="@color/black"
+          android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Berat Badan (kg)"
+        android:layout_marginTop="12dp"
+        android:textColorHint="@color/black"
+        android:fontFamily="@font/poppins_regular">
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/etBerat"
+          android:inputType="numberDecimal"
+          android:layout_width="match_parent"
+          android:textColor="@color/black"
+          android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="12dp">
+      <AutoCompleteTextView
+          android:id="@+id/autoAktivitas"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:minHeight="48dp"
+          android:textColor="@color/black"
+          android:paddingVertical="12dp"
+          android:paddingHorizontal="16dp"
+          android:hint="Pilih Aktivitas"
+          android:inputType="none"
+          android:focusable="true"
+          android:clickable="true"
+          android:fontFamily="@font/poppins_regular"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Target Kalori Harian"
+        android:fontFamily="@font/poppins_regular"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="16dp">
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/etTargetKalori"
+          android:inputType="number"
+          android:textColor="@color/black"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRekomendasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rekomendasikan Target"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green_dark"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginTop="20dp"
+        style="@style/Widget.Material3.Button.IconButton.Filled" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSimpanTarget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan Target"
+        android:textColor="@color/green_dark"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginTop="12dp"
+        style="@style/Widget.Material3.Button.IconButton.Outlined" />
+  </LinearLayout>
+</ScrollView>
