@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,30 +14,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Finalprojectaplikasipenghitungkalori"
         tools:targetApi="31">
+
         <activity
-            android:name=".MainActivity"
+            android:name="com.smkth.final_project_aplikasi_penghitung_kalori.MainActivity"
+            android:exported="false"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="com.smkth.final_project_aplikasi_penghitung_kalori.AturTargetActivity"
             android:exported="false" />
         <activity
-            android:name=".AturTargetActivity"
+            android:name="com.smkth.final_project_aplikasi_penghitung_kalori.TambahkanKaloriActivity"
             android:exported="false" />
         <activity
-            android:name=".TambahkanKaloriActivity"
+            android:name="com.smkth.final_project_aplikasi_penghitung_kalori.HitungKaloriMakananActivity"
             android:exported="false" />
         <activity
-            android:name=".HitungKaloriMakananActivity"
+            android:name="com.smkth.final_project_aplikasi_penghitung_kalori.HitungPembakaranKaloriActivity"
             android:exported="false" />
         <activity
-            android:name=".HitungPembakaranKaloriActivity"
-            android:exported="false" />
-        <activity
-            android:name=".splashActivity"
+            android:name="com.smkth.final_project_aplikasi_penghitung_kalori.splashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.smkth.final_project_aplikasi_penghitung_kalori.ChatbotActivity"
+            android:exported="false" />
+
+
     </application>
 
 </manifest>

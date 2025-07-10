@@ -8,7 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.smkth.final_project_aplikasi_penghitung_kalori.databinding.ActivityHitungKaloriMakananBinding
+import com.smktnh.final_project_aplikasi_penghitung_kalori.databinding.ActivityHitungKaloriMakananBinding
 
 class HitungKaloriMakananActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHitungKaloriMakananBinding

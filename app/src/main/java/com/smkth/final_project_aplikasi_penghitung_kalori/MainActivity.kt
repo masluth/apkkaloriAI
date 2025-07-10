@@ -1,19 +1,14 @@
 package com.smkth.final_project_aplikasi_penghitung_kalori
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.Toast
-import android.content.Context
-import android.content.Intent
 import android.widget.FrameLayout
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import java.text.SimpleDateFormat
-import java.util.*
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.smkth.final_project_aplikasi_penghitung_kalori.databinding.ActivityMainBinding
+import com.smktnh.final_project_aplikasi_penghitung_kalori.R
+import com.smktnh.final_project_aplikasi_penghitung_kalori.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -25,6 +20,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         sharedPref = getSharedPreferences("kalori_prefs", MODE_PRIVATE)
+
+        binding.btnChatAI.setOnClickListener {
+            val intent = Intent(this, ChatbotActivity::class.java)
+            startActivity(intent)
+        }
 
         val btnTambahMakanan = findViewById<FrameLayout>(R.id.btnTambahMakanan)
         val btnHitungMakanan = findViewById<FrameLayout>(R.id.btnHitungMakanan)
@@ -55,6 +55,8 @@ class MainActivity : AppCompatActivity() {
         btnReset.setOnClickListener{
             resetData()
         }
+
+
 
     }
     private fun tampilkanRingkasanKalori() {
@@ -99,5 +101,9 @@ class MainActivity : AppCompatActivity() {
         binding.tvNetKalori.text = "$sisaKalori"
         binding.tvNetCalorieRing.text = "$sisaKalori"
     }
+
+}
+
+private fun Any.setOnclickListener(function: () -> Unit) {
 
 }

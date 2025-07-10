@@ -10,7 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.smkth.final_project_aplikasi_penghitung_kalori.databinding.ActivityHitungPembakaranKaloriBinding
+import com.smktnh.final_project_aplikasi_penghitung_kalori.databinding.ActivityHitungPembakaranKaloriBinding
 
 class HitungPembakaranKaloriActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHitungPembakaranKaloriBinding

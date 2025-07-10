@@ -8,7 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.view.animation.AnimationUtils
-import com.smkth.final_project_aplikasi_penghitung_kalori.databinding.ActivityAturTargetBinding
+import com.smktnh.final_project_aplikasi_penghitung_kalori.R
+import com.smktnh.final_project_aplikasi_penghitung_kalori.databinding.ActivityAturTargetBinding
 
 class AturTargetActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAturTargetBinding
